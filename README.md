@@ -5,6 +5,14 @@ normal CPU (FP32 PyTorch) or an Axelera Metis AIPU (compiled int8 models on
 real hardware). Standalone: bundles its own weights, compiled hardware
 artifacts, and a small KITTI demo clip.
 
+![CPU backend demo](docs/demo_cpu.gif)
+
+*CPU (FP32) backend, sequence 0011: 2D boxes, LiDAR points colored by
+frustum membership, projected 3D box wireframes, and a bird's-eye-view
+trajectory panel. Generate this yourself with `make demo-cpu`. A real
+recording from the Axelera Metis hardware backend is at
+[`docs/evidence/demo_hw.mp4`](docs/evidence/demo_hw.mp4).*
+
 ## What this does
 
 **Stage A** — a fine-tuned YOLOv8n (`tracker2d`) detects 2D boxes in the
