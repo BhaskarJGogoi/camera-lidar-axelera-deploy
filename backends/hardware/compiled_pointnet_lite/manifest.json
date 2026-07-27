@@ -1,0 +1,91 @@
+{
+  "quantized_model_file": "pointnet_lite_compiled_v14/quantized_model.pt",
+  "input_shapes": [
+    [
+      1,
+      255,
+      16,
+      4
+    ]
+  ],
+  "input_dtypes": [
+    "int8"
+  ],
+  "output_shapes": [
+    [
+      1,
+      1,
+      1,
+      64
+    ]
+  ],
+  "output_dtypes": [
+    "int8"
+  ],
+  "input_shapes_original": [
+    [
+      1,
+      4,
+      255,
+      1
+    ]
+  ],
+  "output_shapes_original": [
+    [
+      1,
+      8,
+      1,
+      1
+    ]
+  ],
+  "quantize_params": [
+    [
+      0.39918118715286255,
+      -69
+    ],
+    [
+      0.39918118715286255,
+      -69
+    ]
+  ],
+  "dequantize_params": [
+    [
+      0.3963416814804077,
+      -74
+    ]
+  ],
+  "input_names": [
+    "x"
+  ],
+  "model_lib_file": "pointnet_lite_compiled_v14/model.json",
+  "model_params_file": "pointnet_lite_compiled_v14/params.bin",
+  "n_padded_ch_inputs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      15,
+      0,
+      0
+    ]
+  ],
+  "n_padded_ch_outputs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      56
+    ]
+  ],
+  "input_tensor_layout": "NHWC",
+  "preprocess_graph": null,
+  "postprocess_graph": null,
+  "model_metadata": null,
+  "manifest_version": "1.1"
+}

@@ -1,0 +1,83 @@
+{
+  "name": "kernel_function",
+  "type": "default",
+  "version": "4.0",
+  "generation": "omega",
+  "memory_pools": [
+    {
+      "name": "pool_ddr_input",
+      "size": 32640,
+      "alignment": 64,
+      "memory": "ddr",
+      "depth": 2
+    },
+    {
+      "name": "pool_ddr_output",
+      "size": 64,
+      "alignment": 64,
+      "memory": "ddr",
+      "depth": 2
+    },
+    {
+      "name": "pool_l2_const",
+      "size": 343296,
+      "alignment": 64,
+      "memory": "l2",
+      "depth": 1,
+      "blob_file": "pool_l2_const.bin"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "var_input_ifd0",
+      "memory_pool": "pool_ddr_input",
+      "offset": 16320,
+      "size": 16320,
+      "shape": [
+        1,
+        255,
+        16,
+        4
+      ],
+      "dtype": "int8"
+    },
+    {
+      "name": "var_input_ifd0_1",
+      "memory_pool": "pool_ddr_input",
+      "offset": 0,
+      "size": 16320,
+      "shape": [
+        16320
+      ],
+      "dtype": "int8"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_mmio_var",
+      "memory_pool": "pool_ddr_output",
+      "offset": 0,
+      "size": 64,
+      "shape": [
+        1,
+        1,
+        1,
+        64
+      ],
+      "dtype": "int8"
+    }
+  ],
+  "kernels": [
+    {
+      "name": "kernel_function",
+      "arguments": [
+        "pool_ddr_input",
+        "pool_ddr_output",
+        "pool_l2_const"
+      ],
+      "pipeline_stage": 0,
+      "source_file": "kernel_function.c",
+      "functions": {}
+    }
+  ]
+}

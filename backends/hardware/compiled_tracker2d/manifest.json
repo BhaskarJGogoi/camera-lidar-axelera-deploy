@@ -1,0 +1,222 @@
+{
+  "quantized_model_file": "tracker2d_compiled_letterbox/quantized_model.pt",
+  "input_shapes": [
+    [
+      1,
+      642,
+      656,
+      4
+    ]
+  ],
+  "input_dtypes": [
+    "int8"
+  ],
+  "output_shapes": [
+    [
+      1,
+      80,
+      80,
+      64
+    ],
+    [
+      1,
+      40,
+      40,
+      64
+    ],
+    [
+      1,
+      20,
+      20,
+      64
+    ],
+    [
+      1,
+      80,
+      80,
+      64
+    ],
+    [
+      1,
+      40,
+      40,
+      64
+    ],
+    [
+      1,
+      20,
+      20,
+      64
+    ]
+  ],
+  "output_dtypes": [
+    "int8",
+    "int8",
+    "int8",
+    "int8",
+    "int8",
+    "int8"
+  ],
+  "input_shapes_original": [
+    [
+      1,
+      3,
+      640,
+      640
+    ]
+  ],
+  "output_shapes_original": [
+    [
+      1,
+      64,
+      80,
+      80
+    ],
+    [
+      1,
+      64,
+      40,
+      40
+    ],
+    [
+      1,
+      64,
+      20,
+      20
+    ],
+    [
+      1,
+      3,
+      80,
+      80
+    ],
+    [
+      1,
+      3,
+      40,
+      40
+    ],
+    [
+      1,
+      3,
+      20,
+      20
+    ]
+  ],
+  "quantize_params": [
+    [
+      0.003921329043805599,
+      -130
+    ]
+  ],
+  "dequantize_params": [
+    [
+      0.10867501050233841,
+      -10
+    ],
+    [
+      0.08699951320886612,
+      -10
+    ],
+    [
+      0.08515878766775131,
+      -24
+    ],
+    [
+      0.1316845715045929,
+      106
+    ],
+    [
+      0.16933943331241608,
+      104
+    ],
+    [
+      0.08248455822467804,
+      87
+    ]
+  ],
+  "input_names": [
+    "x"
+  ],
+  "model_lib_file": "tracker2d_compiled_letterbox/model.json",
+  "model_params_file": "tracker2d_compiled_letterbox/params.bin",
+  "n_padded_ch_inputs": [
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      15,
+      0,
+      1
+    ]
+  ],
+  "n_padded_ch_outputs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      61
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      61
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      61
+    ]
+  ],
+  "input_tensor_layout": "NHWC",
+  "preprocess_graph": null,
+  "postprocess_graph": "tracker2d_compiled_letterbox/postprocess_graph.onnx",
+  "model_metadata": null,
+  "manifest_version": "1.1"
+}

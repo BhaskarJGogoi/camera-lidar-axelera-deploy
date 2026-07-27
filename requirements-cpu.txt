@@ -1,0 +1,24 @@
+# CPU/FP32 backend + shared pipeline/ + tests + demo rendering.
+# Hardware backend (backends/hardware/) needs axelera.runtime instead, which
+# ships with the Axelera Voyager SDK's own venv on-device -- not installed
+# via this file. See requirements-host.txt for what pipeline/ alone needs.
+#
+# CPU-only torch wheels on purpose -- this backend auto-detects and uses a
+# GPU if torch.cuda.is_available() (see backends/cpu/pipeline.py), but
+# doesn't require one, and both PyPI's default Linux wheel *and* the cu129
+# index pull several GB of nvidia-* CUDA packages. If you have an NVIDIA
+# GPU and want it used, install torch yourself first following
+# https://pytorch.org/get-started/locally/ before this file (pip won't
+# reinstall a package that's already present and satisfies the version bound).
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
+
+torch>=2.4
+torchvision>=0.19
+ultralytics>=8.3
+
+numpy
+opencv-python
+scipy
+
+pytest

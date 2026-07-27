@@ -1,0 +1,7 @@
+# What pipeline/ (calibration, frustum, tracking, rendering) needs on its
+# own, with no ML backend at all -- e.g. this is close to what's already
+# available in the Axelera device's own Python environment, so
+# backends/hardware/ only adds axelera.runtime on top of these.
+numpy
+opencv-python
+scipy
